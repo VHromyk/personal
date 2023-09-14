@@ -14,7 +14,11 @@ const Layout: FC<ILayout> = ({ children }) => {
           <div className="absolute top-5 right-12">
               <SocialNetworkList />
           </div>
-        <div className="w-full max-w-[880px]">{children}</div>
+        <div className="w-full max-w-[880px]">
+            <div className="flex min-h-screen flex-col items-center justify-between mt-[176px]">
+                {children}
+            </div>
+        </div>
       </div>
     </div>
   )

@@ -15,6 +15,7 @@ const config: Config = {
       textGray: '#404040',
       dividerLight: '#ADC4C9',
       grey: '#C3C3C3',
+      lightBlue: '#D5E2E5'
     },
     extend: {
       backgroundImage: {
