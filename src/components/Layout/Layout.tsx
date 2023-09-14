@@ -10,12 +10,12 @@ const Layout: FC<ILayout> = ({ children }) => {
   return (
     <div className="w-full flex h-full">
       <Aside />
-      <div className="flex items-center justify-center w-full h-full relative">
+      <div className="flex items-start justify-center w-full h-full relative overflow-auto">
           <div className="absolute top-5 right-12">
               <SocialNetworkList />
           </div>
         <div className="w-full max-w-[880px]">
-            <div className="flex min-h-screen flex-col items-center justify-between mt-[176px]">
+            <div className="flex flex-col items-center justify-between mt-[176px]">
                 {children}
             </div>
         </div>

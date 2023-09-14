@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeneralSansFont.className}`}>
-        <main className="h-full">
+        <main className="h-screen">
           <Layout>{children}</Layout>
         </main>
       </body>
