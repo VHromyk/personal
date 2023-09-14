@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {FC, ReactNode} from 'react'
 import { Aside } from '@/components/Aside/Aside'
 import {SocialNetworkList} from '@/components/SocialNetworkList';
 
-const Layout = ({ children }) => {
+interface ILayout {
+    children: ReactNode
+}
+
+const Layout: FC<ILayout> = ({ children }) => {
   return (
     <div className="w-full flex h-full">
       <Aside />
