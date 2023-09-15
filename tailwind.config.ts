@@ -1,9 +1,11 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  mode: 'jit',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/screens/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -15,7 +17,9 @@ const config: Config = {
       textGray: '#404040',
       dividerLight: '#ADC4C9',
       grey: '#C3C3C3',
-      lightBlue: '#D5E2E5'
+      lightBlue: '#D5E2E5',
+      lightGreen: '#89A9B0',
+      black: '#000000',
     },
     extend: {
       backgroundImage: {

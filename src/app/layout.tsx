@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: 'Vitalii Hromyk | Resume',
   description:
     'Detailed resume of Vitalii Hromyk, a skilled frontend developer with experience in modern web technologies and a passion for creating intuitive user interfaces.',
-
 }
 
 export default function RootLayout({

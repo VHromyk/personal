@@ -24,7 +24,9 @@ export const SocialNetworkList = () => {
     <ul className="flex gap-4">
       {socialLinks.map((item) => (
         <li key={item.label}>
-          <a href={item.url} target="_blank" rel="noopener noreferrer">{item?.icon}</a>
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            {item?.icon}
+          </a>
         </li>
       ))}
     </ul>

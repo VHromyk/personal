@@ -4,7 +4,7 @@ import { Navigation } from '@/components/Navigation'
 
 export const Aside = () => {
   return (
-    <aside className="min-w-[280px] min-h-full bg-bgDark py-6 px-12 text-textLight shrink-0">
+    <aside className="min-w-[280px] min-h-full bg-bgDark py-6 px-12 text-textLight shrink-0 hidden lg:block">
       <section className="flex items-center gap-2">
         <div className="w-8 h-8 rounded-full border-[1px] flex items-center justify-center py-2.5 px-2 border-grey">
           <Icon type="LETTER_ICON" />
