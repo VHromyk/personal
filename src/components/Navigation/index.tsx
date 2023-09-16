@@ -18,7 +18,11 @@ const navList = [
   },
 ]
 
-export const Navigation = () => {
+interface INavigation {
+  onClose?: () => void;
+}
+
+export const Navigation = ({onClose}: INavigation) => {
   const pathName = usePathname()
 
   return (
@@ -28,6 +32,7 @@ export const Navigation = () => {
 
         return (
           <Link
+              onClick={onClose}
             href={item.path}
             key={item.label}
             className={`pb-1 relative ${

@@ -20,6 +20,7 @@ const config: Config = {
       lightBlue: '#D5E2E5',
       lightGreen: '#89A9B0',
       black: '#000000',
+      white: '#FFFFFF'
     },
     extend: {
       backgroundImage: {
@@ -27,6 +28,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      height: {
+        'heightWithHeader': 'calc(100vh - 56px)'
+      }
     },
   },
   plugins: [],
