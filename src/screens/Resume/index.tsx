@@ -6,11 +6,13 @@ import { Education } from '@/screens/Resume/Education'
 
 export const ResumePage = () => {
   return (
-    <div className="flex flex-col gap-[70px] lg:gap-[100px]">
-      <Preview />
-      <Skills />
-      <Experience />
-      <Education />
+    <div className="flex flex-col items-center justify-between lg:mt-[152px]">
+      <div className="flex flex-col gap-[70px] lg:gap-[100px]">
+        <Preview />
+        <Skills />
+        <Experience />
+        <Education />
+      </div>
     </div>
   )
 }

@@ -19,20 +19,20 @@ const navList = [
 ]
 
 interface INavigation {
-  onClose?: () => void;
+  onClose?: () => void
 }
 
-export const Navigation = ({onClose}: INavigation) => {
+export const Navigation = ({ onClose }: INavigation) => {
   const pathName = usePathname()
 
   return (
-    <nav className="flex flex-col gap-10">
+    <nav className="flex flex-col gap-8 lg:gap-10">
       {navList.map((item) => {
         const isActive = pathName === item.path
 
         return (
           <Link
-              onClick={onClose}
+            onClick={onClose}
             href={item.path}
             key={item.label}
             className={`pb-1 relative ${
