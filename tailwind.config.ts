@@ -23,6 +23,8 @@ const config: Config = {
       black: '#000000',
       white: '#FFFFFF',
       lightBlue1: '#E1F0F4',
+      textDarkGreen: '#123D47',
+      error: '#FF0000',
     },
     extend: {
       backgroundImage: {

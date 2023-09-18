@@ -4,7 +4,7 @@ import { Icon } from '../Icon'
 const socialLinks = [
   {
     label: 'linkedin',
-    icon: <Icon type="LINKEDIN" />,
+    icon: <Icon type="LINKEDIN" fill="#123D47" />,
     url: 'https://www.linkedin.com/in/vitalii-hromyk/',
   },
   {
@@ -14,7 +14,7 @@ const socialLinks = [
   },
   {
     label: 'telegram',
-    icon: <Icon type="TELEGRAM" />,
+    icon: <Icon type="TELEGRAM" fill="#123D47" />,
     url: 'https://t.me/Vitalii_Hromyk',
   },
 ]
