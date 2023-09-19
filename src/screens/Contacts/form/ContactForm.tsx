@@ -49,6 +49,8 @@ export const ContactForm = () => {
     },
   })
 
+  console.log({errors})
+
   const onSubmitForm = async (data: any) => {
     console.log({ data })
   }
@@ -64,7 +66,7 @@ export const ContactForm = () => {
           type={form.name.type}
           placeholder={form.name.placeholder}
           error={errors.name}
-          registerOptions={register(form.name.id, { required: true })}
+          registerOptions={register('name', { required: true })}
         />
       <InputField
           label={form.company.label}
@@ -72,7 +74,7 @@ export const ContactForm = () => {
           type={form.company.type}
           placeholder={form.company.placeholder}
           error={errors.company}
-          registerOptions={register(form.company.id, { required: true })}
+          registerOptions={register('company', { required: true })}
       />
       <InputField
           label={form.email.label}
@@ -80,7 +82,7 @@ export const ContactForm = () => {
           type={form.email.type}
           placeholder={form.email.placeholder}
           error={errors.email}
-          registerOptions={register(form.email.id, { required: true })}
+          registerOptions={register('email', { required: true })}
       />
       <TextAreaField
           id={form.textarea.id}

@@ -204,7 +204,9 @@ const ICONS: { [key in IconType]: React.FC<any> } = {
 
 type TIcon = {
   type: IconType
-  props?: any
+  fill?: string
+  width?: number
+  height?: number
 }
 
 const Icon: React.FC<TIcon> = ({ type, ...props }) => {
