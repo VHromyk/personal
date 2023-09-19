@@ -1,9 +1,11 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { validationSchema } from '@/screens/Contacts/form/formValidation'
 import { InputField, TextAreaField } from '@/screens/Contacts/form/InputField'
+
+import axios from 'axios'
 
 const form = {
   name: {
@@ -33,6 +35,7 @@ const form = {
 }
 
 export const ContactForm = () => {
+  const [isLoading, setLoading] = useState(false)
   const {
     register,
     handleSubmit,
@@ -49,10 +52,22 @@ export const ContactForm = () => {
     },
   })
 
-  console.log({ errors })
-
   const onSubmitForm = async (data: any) => {
-    console.log({ data })
+    setLoading(true)
+    try {
+      const response = await axios.post('api/send', data)
+
+      if (response.status === 200) {
+        console.log({ message: response.data.message })
+      }
+    } catch (e) {
+      if(e instanceof Error) {
+        throw e;
+      }
+    } finally {
+      reset()
+      setLoading(false)
+    }
   }
 
   return (
@@ -92,10 +107,11 @@ export const ContactForm = () => {
         registerOptions={register('textarea', { required: true })}
       />
       <button
+          disabled={isLoading}
         type="submit"
         className="py-[9px] px-4 rounded-full bg-bgDark text-white font-medium leading-normal w-min whitespace-nowrap hover:opacity-80 ease-in duration-300"
       >
-        Send mail
+        {isLoading ? 'Sending...' : 'Send mail'}
       </button>
     </form>
   )
