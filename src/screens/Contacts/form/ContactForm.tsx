@@ -29,7 +29,7 @@ const form = {
     type: 'textarea',
     label: 'Message*',
     placeholder: 'Enter your message',
-  }
+  },
 }
 
 export const ContactForm = () => {
@@ -49,7 +49,7 @@ export const ContactForm = () => {
     },
   })
 
-  console.log({errors})
+  console.log({ errors })
 
   const onSubmitForm = async (data: any) => {
     console.log({ data })
@@ -60,36 +60,36 @@ export const ContactForm = () => {
       className="mt-10 flex flex-col gap-6"
       onSubmit={handleSubmit(onSubmitForm)}
     >
-        <InputField
-          label={form.name.label}
-          id={form.name.id}
-          type={form.name.type}
-          placeholder={form.name.placeholder}
-          error={errors.name}
-          registerOptions={register('name', { required: true })}
-        />
       <InputField
-          label={form.company.label}
-          id={form.company.id}
-          type={form.company.type}
-          placeholder={form.company.placeholder}
-          error={errors.company}
-          registerOptions={register('company', { required: true })}
+        label={form.name.label}
+        id={form.name.id}
+        type={form.name.type}
+        placeholder={form.name.placeholder}
+        error={errors.name}
+        registerOptions={register('name', { required: true })}
       />
       <InputField
-          label={form.email.label}
-          id={form.email.id}
-          type={form.email.type}
-          placeholder={form.email.placeholder}
-          error={errors.email}
-          registerOptions={register('email', { required: true })}
+        label={form.company.label}
+        id={form.company.id}
+        type={form.company.type}
+        placeholder={form.company.placeholder}
+        error={errors.company}
+        registerOptions={register('company', { required: true })}
+      />
+      <InputField
+        label={form.email.label}
+        id={form.email.id}
+        type={form.email.type}
+        placeholder={form.email.placeholder}
+        error={errors.email}
+        registerOptions={register('email', { required: true })}
       />
       <TextAreaField
-          id={form.textarea.id}
-          label={form.textarea.label}
-          error={errors.textarea}
-          placeholder={form.textarea.placeholder}
-          registerOptions={register('textarea', { required: true })}
+        id={form.textarea.id}
+        label={form.textarea.label}
+        error={errors.textarea}
+        placeholder={form.textarea.placeholder}
+        registerOptions={register('textarea', { required: true })}
       />
       <button
         type="submit"

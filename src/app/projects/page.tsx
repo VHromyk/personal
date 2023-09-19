@@ -1,6 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { ProjectsPage } from '@/screens/Projects'
+import Layout from '@/components/Layout/Layout'
 
 export const metadata: Metadata = {
   title: 'Vitalii Hromyk | Projects',
@@ -9,7 +10,11 @@ export const metadata: Metadata = {
 }
 
 const Projects = () => {
-  return <ProjectsPage />
+  return (
+    <Layout>
+      <ProjectsPage />
+    </Layout>
+  )
 }
 
 export default Projects
