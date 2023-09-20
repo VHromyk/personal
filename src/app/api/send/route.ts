@@ -11,7 +11,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ status: 200, message: response })
     }
 
-    return NextResponse.json({ status: 401, message: response })
+    return NextResponse.json({ status: 400, message: response })
   } catch (e) {
     if(typeof e === 'object') {
       return NextResponse.json({ status: 500, message: e })

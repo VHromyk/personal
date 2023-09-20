@@ -1,9 +1,10 @@
 import React from 'react'
 import { Icon } from '@/components/Icon'
 import { Navigation } from '@/components/Navigation'
+import Link from 'next/link'
 
 interface IAside {
-  onClose?: () => void
+  onClose: () => void
 }
 
 export const Aside = ({ onClose }: IAside) => {
@@ -18,7 +19,9 @@ export const Aside = ({ onClose }: IAside) => {
         </a>
       </section>
       <section className="mt-[60px] lg:mt-[120px] flex flex-col gap-1">
-        <span className="text-2xl font-semibold">Vitalii Hromyk</span>
+          <Link href="/" className="text-2xl font-semibold ease-in duration-300 hover:opacity-70">
+              Vitalii Hromyk
+          </Link>
         <span className="text-sm">Front-end developer</span>
       </section>
       <section className="mt-10 lg:mt-[72px]">
