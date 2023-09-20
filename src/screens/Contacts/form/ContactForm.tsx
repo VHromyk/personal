@@ -122,7 +122,7 @@ export const ContactForm = () => {
             {isLoading ? 'Sending...' : 'Send mail'}
           </button>
         </form>
-        <CongratulationModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+        <CongratulationModal isOpen={isOpen} onClose={onClose} />
       </>
   )
 }

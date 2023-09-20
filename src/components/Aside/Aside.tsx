@@ -4,7 +4,7 @@ import { Navigation } from '@/components/Navigation'
 import Link from 'next/link'
 
 interface IAside {
-  onClose: () => void
+  onClose?: () => void
 }
 
 export const Aside = ({ onClose }: IAside) => {

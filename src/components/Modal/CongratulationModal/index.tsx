@@ -8,7 +8,12 @@ import WINK_IMG from '@/assets/images/wink.png'
 import {BackHomeBtn} from '@/components/Buttons/BackHome';
 import {SocialNetworkList} from '@/components/SocialNetworkList';
 
-export const CongratulationModal = ({isOpen, onOpen, onClose}) => {
+type TCongratulationModal = {
+    isOpen: boolean,
+    onClose: () => void;
+}
+
+export const CongratulationModal = ({isOpen, onClose}: TCongratulationModal) => {
     return (
         <div className={`w-full h-screen fixed inset-0 z-50 p-4 ease-in-out duration-300 ${isOpen ? 'opacity-1 pointer-events-all' : 'opacity-0 pointer-events-none'}`}>
             <div className="fixed inset-0 bg-black opacity-70" />
@@ -22,10 +27,10 @@ export const CongratulationModal = ({isOpen, onOpen, onClose}) => {
                             <Image src={WINK_IMG} alt='wink image' />
                         </Avatar>
                         <span className="block mt-3 text-3xl font-medium leading-normal text-textDark">Thank you for contacting me!</span>
-                        <span className="block mt-1 leading-normal">I have received your message.  I'll reach out to you soon!</span>
+                        <span className="block mt-1 leading-normal">I have received your message.  I&apos;ll reach out to you soon!</span>
                         <BackHomeBtn />
                         <div className="mt-10 flex flex-col items-center">
-                            <span className="text-sm leading-4 font-medium text-textDark">Let's connect</span>
+                            <span className="text-sm leading-4 font-medium text-textDark">Let&apos;s connect</span>
                             <div className="mt-2">
                                 <SocialNetworkList />
                             </div>
