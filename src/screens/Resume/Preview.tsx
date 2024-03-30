@@ -4,7 +4,7 @@ import CURVE_IMG from '@/assets/images/curve.png'
 import { Icon } from '@/components/Icon'
 import Image from 'next/image'
 
-const fileURL = '/files/Vitalii_Hromyk_CV.pdf'
+const fileURL = '/files/Vitalii_Hromyk_Frontent_CV_April_2024.pdf'
 
 export const Preview = () => {
   return (

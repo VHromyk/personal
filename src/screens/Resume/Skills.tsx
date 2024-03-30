@@ -41,6 +41,9 @@ const hardSkills = [
   'React',
   'Next.JS',
   'TypeScript',
+  'Socket.io',
+  'Google map API',
+  'SEO',
   'Webpack',
   'Gatsby',
   'SCSS',
@@ -52,13 +55,18 @@ const hardSkills = [
 const hardSkillsProgressList = [
   {
     name: 'HTML5/CSS3',
-    level: '90%',
-    style: 'w-[90%]',
+    level: '99%',
+    style: 'w-[99%]',
   },
   {
     name: 'JavaScript',
     level: '90%',
     style: 'w-[90%]',
+  },
+  {
+    name: 'Typescript',
+    level: '95%',
+    style: 'w-[95%]',
   },
   {
     name: 'React.JS',
@@ -67,8 +75,8 @@ const hardSkillsProgressList = [
   },
   {
     name: 'Next.JS',
-    level: '95%',
-    style: 'w-[95%]',
+    level: '99%',
+    style: 'w-[99%]',
   },
   {
     name: 'Gatsby',

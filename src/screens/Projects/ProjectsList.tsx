@@ -7,21 +7,31 @@ import ECR_IMG from '@/assets/images/ecr.jpg'
 import DELTALAKE_IMG from '@/assets/images/deltaLake.jpg'
 import AVALANCHE_IMG from '@/assets/images/llm.jpg'
 import THC_IMG from '@/assets/images/thc.jpg'
+import SOLAR from '@/assets/images/solar.png'
+import DLC from '@/assets/images/dlc.png'
 
 const projectsList = [
   {
-    image: WRITESONIC_IMG,
-    title: 'Writesonic - AI-Driven Content Creation',
+    image: DLC,
+    title: 'DLC fun',
     description:
-      'For Writesonic, I crafted the frontend using HTML with Tailwind CSS and implemented dynamic logic with React JS (Next.js). The site empowers users to create AI-generated content for social networks seamlessly. ',
-    technologies: ['HTML5', 'React', 'Next.JS', 'Tailwind'],
-    link: 'https://writesonic.com/',
+        "This project is a developed and operational platform supporting the video game mod developers' community. It offers a unique opportunity for mod creators to showcase their works to a wide audience and receive financial compensation. The platform ensures ease of use by providing an efficient interface for accessing various mods and facilitating interaction between users and developers.",
+    technologies: ['HTML5', 'React', 'Next.JS', 'Tailwind', 'SEO', 'React hook form', 'WYSIWYG'],
+    link: 'https://dlcfun.com/',
+  },
+  {
+    image: SOLAR,
+    title: 'Solar Near Me',
+    description:
+        'This project is an innovative platform that is planned to be launched soon to connect solar panel installers with potential clients. It aims to simplify the process of finding reliable professionals in solar energy and to provide users with access to an extensive database of service providers. Installers will have a fantastic opportunity to expand their operations and establish direct contact with interested clients. Future users will be able to effortlessly compare services, review feedback, and choose the best contractor for their projects.',
+    technologies: ['HTML5', 'React', 'Next.JS', 'SASS', 'Redux Toolkit', 'Socket.io', 'Formik', 'Google Map Api'],
+    link: 'https://solarnearme.uk/',
   },
   {
     image: DUELMASTERS_IMG,
     title: 'Duelmasters - eSports and Betting Platform',
     description:
-      'At Duelmasters, I handled mark-up using HTML and CSS and incorporated dynamic functionalities with React JS. This involved connecting to MongoDB and WordPress for the admin panel. I also integrated cryptocurrency payment and achieved an impressive Pagespeed score of 99. The site offers cyber-sports and allows users to bet on their gaming prowess.',
+        'At Duelmasters, I handled mark-up using HTML and CSS and incorporated dynamic functionalities with React JS. This involved connecting to MongoDB and WordPress for the admin panel. I also integrated cryptocurrency payment and achieved an impressive Pagespeed score of 99. The site offers cyber-sports and allows users to bet on their gaming prowess.',
     technologies: [
       'HTML5',
       'SCSS',
@@ -32,6 +42,14 @@ const projectsList = [
       'GraphQL',
     ],
     link: 'https://www.duelmasters.io/home/r',
+  },
+  {
+    image: WRITESONIC_IMG,
+    title: 'Writesonic - AI-Driven Content Creation',
+    description:
+      'For Writesonic, I crafted the frontend using HTML with Tailwind CSS and implemented dynamic logic with React JS (Next.js). The site empowers users to create AI-generated content for social networks seamlessly. ',
+    technologies: ['HTML5', 'React', 'Next.JS', 'Tailwind'],
+    link: 'https://writesonic.com/',
   },
   {
     image: ECR_IMG,
@@ -101,11 +119,11 @@ export const ProjectsList = () => {
             key={item.title}
             className="flex flex-col md:flex-row gap-5 md:gap-12"
           >
-            <div className="flex-1">
+            <div className="flex-1 rounded-sm overflow-hidden">
               <Image src={item.image} alt={item.title} />
             </div>
             <div className="flex-1">
-              <h2 className="text-2xl uppercase font-medium leading-normal hover:opacity-50 ease-in duration-300">
+              <h2 className="text-2xl uppercase font-medium leading-normal hover:opacity-50 ease-in duration-300 underline">
                 <a
                   href={item.link}
                   target="_blank"

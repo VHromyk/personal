@@ -24,6 +24,13 @@ const workExperienceList = [
     company: 'GoIT',
     description: `<span>At GoIT, I work as a mentor, assisting students in mastering React and enhancing their development skills. Leveraging my experience and knowledge, I provide them with essential support, guiding them throughout their learning journey and helping them overcome challenges.</span>`,
   },
+  {
+    time: 'October 2023 - April 2024',
+    type: 'Full time',
+    position: 'Front-end developer (React.JS, Next.JS)',
+    company: 'Filancy',
+    description: `<span>At Filancy, my role as a frontend developer has significantly enhanced my professional skills. Working on a variety of challenging projects, I have deepened my knowledge of modern technologies and development tools and gained valuable experience in implementing user interfaces that meet high usability and accessibility standards. Collaborating with a team of talented professionals and exchanging experiences with colleagues have fostered my communication and teamwork skills, which are integral to my professional growth.</span>`,
+  },
 ]
 
 export const Experience = () => {
