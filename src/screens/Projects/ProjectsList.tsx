@@ -83,7 +83,7 @@ const projectsList = [
     image: AVALANCHE_IMG,
     title:
       'LLM Avalanche - Technical State of LLMs for the Real World' +
-      ' Nov and in the Future',
+      ' Now and in the Future',
     description:
       "The project is built on Next.js with an integration of ACF WP as the content manager. Data is fetched using Apollo. In addition to the core functionalities, there's an implementation for loading videos directly from YouTube playlists",
     technologies: [
@@ -106,7 +106,7 @@ const projectsList = [
       'Styled-Components',
       'Youtube API',
     ],
-    link: 'https://www.llmavalanche.com/?events=all',
+    link: 'https://thccanada.ca/',
   },
 ]
 

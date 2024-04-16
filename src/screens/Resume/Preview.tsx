@@ -14,8 +14,7 @@ export const Preview = () => {
       </div>
       <span className="mt-4 font-medium block">Hi I`m Vitalii 🖐</span>
       <h1 className="w-full font-medium block mt-6 text-4xl max-w-[710px] text-center relative text-textDark leading-normal">
-        I`m frontend web developer I can provide clean code and pixel perfect
-        design
+          I’m a frontend web developer.  I can provide clean code and pixel perfect design.
         <Image
           src={CURVE_IMG}
           alt="curve"

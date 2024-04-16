@@ -16,11 +16,11 @@ const skillsList = [
 
 const interestsList = [
   'Learn English (take a part in "ENGin" program)',
-  ' Sport (Basketball, Table Tennis, Yoga)',
+  ' Sports (Basketball, Table Tennis, Yoga)',
   ' Architecture',
   ' Design',
   ' IT technologies',
-  ' Investing',
+  ' Stock Market',
 ]
 
 const languages = [
