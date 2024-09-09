@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-
+import Image, { StaticImageData } from 'next/image'
 import WRITESONIC_IMG from '@/assets/images/writesonic.jpg'
 import DUELMASTERS_IMG from '@/assets/images/duelmasters.jpg'
 import ECR_IMG from '@/assets/images/ecr.jpg'
@@ -9,29 +8,47 @@ import AVALANCHE_IMG from '@/assets/images/llm.jpg'
 import THC_IMG from '@/assets/images/thc.jpg'
 import SOLAR from '@/assets/images/solar.png'
 import DLC from '@/assets/images/dlc.png'
+import { MotionListElement } from '@/components/Animation/MotionListElement'
 
 const projectsList = [
   {
     image: DLC,
     title: 'DLC fun',
     description:
-        "This project is a developed and operational platform supporting the video game mod developers' community. It offers a unique opportunity for mod creators to showcase their works to a wide audience and receive financial compensation. The platform ensures ease of use by providing an efficient interface for accessing various mods and facilitating interaction between users and developers.",
-    technologies: ['HTML5', 'React', 'Next.JS', 'Tailwind', 'SEO', 'React hook form', 'WYSIWYG'],
+      "This project is a developed and operational platform supporting the video game mod developers' community. It offers a unique opportunity for mod creators to showcase their works to a wide audience and receive financial compensation. The platform ensures ease of use by providing an efficient interface for accessing various mods and facilitating interaction between users and developers.",
+    technologies: [
+      'HTML5',
+      'React',
+      'Next.JS',
+      'Tailwind',
+      'SEO',
+      'React hook form',
+      'WYSIWYG',
+    ],
     link: 'https://dlcfun.com/',
   },
   {
     image: SOLAR,
     title: 'Solar Near Me',
     description:
-        'This project is an innovative platform that is planned to be launched soon to connect solar panel installers with potential clients. It aims to simplify the process of finding reliable professionals in solar energy and to provide users with access to an extensive database of service providers. Installers will have a fantastic opportunity to expand their operations and establish direct contact with interested clients. Future users will be able to effortlessly compare services, review feedback, and choose the best contractor for their projects.',
-    technologies: ['HTML5', 'React', 'Next.JS', 'SASS', 'Redux Toolkit', 'Socket.io', 'Formik', 'Google Map Api'],
+      'This project is an innovative platform that is planned to be launched soon to connect solar panel installers with potential clients. It aims to simplify the process of finding reliable professionals in solar energy and to provide users with access to an extensive database of service providers. Installers will have a fantastic opportunity to expand their operations and establish direct contact with interested clients. Future users will be able to effortlessly compare services, review feedback, and choose the best contractor for their projects.',
+    technologies: [
+      'HTML5',
+      'React',
+      'Next.JS',
+      'SASS',
+      'Redux Toolkit',
+      'Socket.io',
+      'Formik',
+      'Google Map Api',
+    ],
     link: 'https://solarnearme.uk/',
   },
   {
     image: DUELMASTERS_IMG,
     title: 'Duelmasters - eSports and Betting Platform',
     description:
-        'At Duelmasters, I handled mark-up using HTML and CSS and incorporated dynamic functionalities with React JS. This involved connecting to MongoDB and WordPress for the admin panel. I also integrated cryptocurrency payment and achieved an impressive Pagespeed score of 99. The site offers cyber-sports and allows users to bet on their gaming prowess.',
+      'At Duelmasters, I handled mark-up using HTML and CSS and incorporated dynamic functionalities with React JS. This involved connecting to MongoDB and WordPress for the admin panel. I also integrated cryptocurrency payment and achieved an impressive Pagespeed score of 99. The site offers cyber-sports and allows users to bet on their gaming prowess.',
     technologies: [
       'HTML5',
       'SCSS',
@@ -110,41 +127,66 @@ const projectsList = [
   },
 ]
 
+type TProjectsListItemProps = {
+  image: StaticImageData
+  title: string
+  description: string
+  technologies: string[]
+  link: string
+}
+
+const ProjectsListItem = ({
+  item,
+  index,
+}: {
+  item: TProjectsListItemProps
+  index: number
+}) => {
+  return (
+    <MotionListElement index={index}>
+      <div className="flex flex-col md:flex-row gap-5 md:gap-12">
+        <div className="flex-1 rounded-lg overflow-hidden p-2 border-[1px] border-bgDark">
+          <Image
+            src={item.image}
+            alt={item.title}
+            className="h-full w-full object-cover rounded-lg"
+          />
+        </div>
+        <div className="flex-1">
+          <h2 className="text-2xl uppercase font-medium leading-normal hover:opacity-50 ease-in duration-300 underline">
+            <a
+              href={item.link}
+              target="_blank"
+              rel="nofollow noreferrer"
+              className="block"
+            >
+              {item.title}
+            </a>
+          </h2>
+          <span className="block mt-2.5">{item.description}</span>
+          <ul className="flex flex-wrap mt-4 gap-x-3 gap-y-2">
+            {item.technologies.map((item) => (
+              <li
+                key={item}
+                className="uppercase font-medium leading-normal py-[5.5px] px-3 bg-lightBlue1 rounded-full border-[1px] border-darkGray"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </MotionListElement>
+  )
+}
+
 export const ProjectsList = () => {
   return (
     <ul className="w-full flex flex-col gap-10 md:gap-16">
-      {projectsList.map((item) => {
+      {projectsList.map((item, index) => {
         return (
-          <li
-            key={item.title}
-            className="flex flex-col md:flex-row gap-5 md:gap-12"
-          >
-            <div className="flex-1 rounded-sm overflow-hidden">
-              <Image src={item.image} alt={item.title} />
-            </div>
-            <div className="flex-1">
-              <h2 className="text-2xl uppercase font-medium leading-normal hover:opacity-50 ease-in duration-300 underline">
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  className="block"
-                >
-                  {item.title}
-                </a>
-              </h2>
-              <span className="block mt-2.5">{item.description}</span>
-              <ul className="flex flex-wrap mt-4 gap-x-3 gap-y-2">
-                {item.technologies.map((item) => (
-                  <li
-                    key={item}
-                    className="uppercase font-medium leading-normal py-[5.5px] px-3 bg-lightBlue1 rounded-full border-[1px] border-darkGray"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <li key={item.title}>
+            <ProjectsListItem item={item} index={index} />
           </li>
         )
       })}

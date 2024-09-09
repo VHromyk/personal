@@ -8,7 +8,7 @@ interface IModal {
 }
 
 const Modal = ({ isOpen, onClose }: IModal) => {
-  useNoScroll(isOpen)
+  useNoScroll(isOpen, 1024)
 
   return (
     <div
@@ -16,7 +16,7 @@ const Modal = ({ isOpen, onClose }: IModal) => {
         !isOpen
           ? 'opacity-0' + ' pointer-events-none'
           : 'opacity-1 pointer-events-auto'
-      } lg:opacity-0 pointer-events-none`}
+      } lg:opacity-0 lg:pointer-events-none`}
     >
       <div className="fixed inset-0 bg-black opacity-70 z-10"></div>
       <div

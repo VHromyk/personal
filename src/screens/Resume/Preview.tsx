@@ -3,8 +3,7 @@ import AVATAR_IMG from '@/assets/images/avatar.jpg'
 import CURVE_IMG from '@/assets/images/curve.png'
 import { Icon } from '@/components/Icon'
 import Image from 'next/image'
-
-const fileURL = '/files/Vitalii_Hromyk_Frontent_CV_April_2024.pdf'
+import DownloadCvButton from '@/screens/Resume/DownloadCvButton'
 
 export const Preview = () => {
   return (
@@ -14,7 +13,8 @@ export const Preview = () => {
       </div>
       <span className="mt-4 font-medium block">Hi I`m Vitalii 🖐</span>
       <h1 className="w-full font-medium block mt-6 text-4xl max-w-[710px] text-center relative text-textDark leading-normal">
-          I’m a frontend web developer.  I can provide clean code and pixel perfect design.
+        I’m a frontend web developer. I can provide clean code and pixel perfect
+        design.
         <Image
           src={CURVE_IMG}
           alt="curve"
@@ -27,14 +27,7 @@ export const Preview = () => {
         problem-solving abilities enable me to troubleshoot and optimize code,
         ensuring a flawless user experience.
       </span>
-      <a
-        href={fileURL}
-        download={true}
-        className="mt-6 bg-bgDark text-textLight py-2 px-4 rounded-full flex gap-2 items-center ease-in duration-300 hover:scale-105"
-      >
-        <Icon type="DOWNLOAD" />
-        <span>Download my CV</span>
-      </a>
+      <DownloadCvButton />
     </div>
   )
 }

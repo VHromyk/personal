@@ -41,7 +41,7 @@ export const ContactForm = () => {
   const [isLoading, setLoading] = useState(false);
   const {isOpen, onOpen, onClose} = useOpen();
 
-  useNoScroll(isOpen)
+  useNoScroll(isOpen, 1024)
 
   const {
     register,
@@ -117,7 +117,7 @@ export const ContactForm = () => {
           <button
               disabled={isLoading}
               type="submit"
-              className="py-[9px] px-4 rounded-full bg-bgDark text-white font-medium leading-normal w-min whitespace-nowrap hover:opacity-80 ease-in duration-300"
+              className="py-[9px] px-4 disabled:opacity-50 rounded-full bg-bgDark text-white font-medium leading-normal w-min whitespace-nowrap hover:opacity-80 ease-in duration-300"
           >
             {isLoading ? 'Sending...' : 'Send mail'}
           </button>

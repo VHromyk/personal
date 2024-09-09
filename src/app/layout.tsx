@@ -26,8 +26,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeneralSansFont.className}`}>
-        <main className="h-screen">{children}</main>
+      <body className={`h-screen ${GeneralSansFont.className}`}>
+        {children}
       </body>
     </html>
   )

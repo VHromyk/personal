@@ -21,7 +21,7 @@ const socialList = [
 
 export const Contacts = () => {
   return (
-    <div className="mt-[46px] md:mt-[104px] flex flex-col gap-[70px] md:flex-row md:gap-20 leading-normal">
+    <div className="mt-[46px] pb-[100px] md:mt-[104px] flex flex-col gap-[70px] md:flex-row md:gap-20 leading-normal">
       <div className="flex-1">
         <h1 className="font-medium leading-normal text-4xl">Contact me</h1>
         <span className="inline-block mt-3 text-textGray">Get in Touch 😉</span>

@@ -19,16 +19,18 @@ const Layout: FC<ILayout> = ({ children }) => {
         <div className="hidden lg:block">
           <Aside />
         </div>
-        <div className="flex flex-col items-center w-full h-full relative overflow-auto">
-          <div className="absolute top-5 right-12 hidden lg:block">
-            <SocialNetworkList />
-          </div>
-          <div className="w-full max-w-[976px] py-6 px-4 lg:px-12">
-            {children}
-          </div>
+        <div className="w-full lg:w-[calc(100%-280px)]">
+            <div className='w-full py-3 px-4 border-b-[1px] border-lightBlue h-[56px] lg:sticky lg:top-0 lg:bg-white z-10 lg:flex justify-end hidden'>
+                <SocialNetworkList />
+            </div>
+            <div className='w-full flex justify-center overflow-y-auto lg:h-[calc(100%-56px)]'>
+                <div className="w-full max-w-[976px] py-6 px-4 lg:px-12">
+                    {children}
+                </div>
+            </div>
         </div>
       </div>
-      <Modal isOpen={isOpen} onClose={onClose} />
+        <Modal isOpen={isOpen} onClose={onClose}/>
     </>
   )
 }
