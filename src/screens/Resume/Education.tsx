@@ -3,7 +3,7 @@ import React from 'react'
 const educationList = [
   {
     university: 'GoIT Academy',
-    occupation: 'Full-stack developer course',
+    occupation: 'Full-stack developer',
     time: 'June 2020 - July 2021',
   },
   {

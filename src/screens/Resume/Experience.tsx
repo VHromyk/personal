@@ -2,13 +2,18 @@ import React from 'react'
 
 const workExperienceList = [
   {
-    time: 'July 2021 - February 2022',
+    time: 'October 2023 - Until now',
     type: 'Full time',
-    position: 'Front-end developer',
-    company: 'KAVOON',
-    description: `<span>
-    Working as a frontend developer, I collaborated with a team at a growing product company based in Ukraine. We predominantly utilized React.JS and Next.JS to build dynamic and user-centric applications. One of our standout projects was the development of <a href="https://www.kavoon.com.ua/uk" target="_blank">https://www.kavoon.com.ua/uk</a> — a comprehensive resource targeted at our audience. This platform showcases our commitment to quality design and efficient functionality, reflecting the standards and values we uphold in our work.
-</span>`,
+    position: 'Front-end developer (React.JS, Next.JS)',
+    company: 'Filancy',
+    description: `<span>At Filancy, my role as a frontend developer has significantly enhanced my professional skills. Working on a variety of challenging projects, I have deepened my knowledge of modern technologies and development tools and gained valuable experience in implementing user interfaces that meet high usability and accessibility standards. Collaborating with a team of talented professionals and exchanging experiences with colleagues have fostered my communication and teamwork skills, which are integral to my professional growth.</span>`,
+  },
+  {
+    time: 'November 2022 - September 2023',
+    type: 'Part time',
+    position: 'Education mentor (React.JS)',
+    company: 'GoIT',
+    description: `<span>At GoIT, I worked as a mentor, assisting students in mastering React and enhancing their development skills. Leveraging my experience and knowledge, I provide them with essential support, guiding them throughout their learning journey and helping them overcome challenges.</span>`,
   },
   {
     time: 'February 2022 - October 2023',
@@ -18,18 +23,13 @@ const workExperienceList = [
     description: `<span>During my tenure at SMART-UI, I actively utilized leading frontend technologies such as JS, React, and Next.JS etc. Thanks to my professional expertise, I was involved in creating and optimizing interactive user interfaces, ensuring high application performance and responsiveness. Working closely with a team of designers and backend developers, I assisted in implementing cross-platform solutions and participated in the development cycle of projects from the initial stage to launch.</span>`,
   },
   {
-    time: 'November 2022 - Until now',
-    type: 'Part time',
-    position: 'Education mentor (React.JS)',
-    company: 'GoIT',
-    description: `<span>At GoIT, I work as a mentor, assisting students in mastering React and enhancing their development skills. Leveraging my experience and knowledge, I provide them with essential support, guiding them throughout their learning journey and helping them overcome challenges.</span>`,
-  },
-  {
-    time: 'October 2023 - April 2024',
+    time: 'July 2021 - February 2022',
     type: 'Full time',
-    position: 'Front-end developer (React.JS, Next.JS)',
-    company: 'Filancy',
-    description: `<span>At Filancy, my role as a frontend developer has significantly enhanced my professional skills. Working on a variety of challenging projects, I have deepened my knowledge of modern technologies and development tools and gained valuable experience in implementing user interfaces that meet high usability and accessibility standards. Collaborating with a team of talented professionals and exchanging experiences with colleagues have fostered my communication and teamwork skills, which are integral to my professional growth.</span>`,
+    position: 'Front-end developer',
+    company: 'KAVOON',
+    description: `<span>
+    Working as a frontend developer, I collaborated with a team at a growing product company based in Ukraine. We predominantly utilized React.JS and Next.JS to build dynamic and user-centric applications. One of our standout projects was the development of <a href="https://www.kavoon.com.ua/uk" target="_blank">https://www.kavoon.com.ua/uk</a> — a comprehensive resource targeted at our audience. This platform showcases our commitment to quality design and efficient functionality, reflecting the standards and values we uphold in our work.
+</span>`,
   },
 ]
 

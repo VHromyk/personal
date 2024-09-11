@@ -1,7 +1,8 @@
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
 import React from 'react'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Layout from '@/components/Layout/Layout'
 
 const GeneralSansFont = localFont({ src: '../fonts/GeneralSans-Variable.ttf' })
 
@@ -26,8 +27,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`h-screen ${GeneralSansFont.className}`}>
-        {children}
+      <body className={`${GeneralSansFont.className}`}>
+        <Layout>{children}</Layout>
       </body>
     </html>
   )

@@ -41,7 +41,11 @@ const hardSkills = [
   'React',
   'Next.JS',
   'TypeScript',
+  'Redux Toolkit',
+  'SWR',
   'Socket.io',
+  'Formik',
+  'React hook form',
   'Google map API',
   'SEO',
   'Webpack',
@@ -72,6 +76,16 @@ const hardSkillsProgressList = [
     name: 'React.JS',
     level: '99%',
     style: 'w-[99%]',
+  },
+  {
+    name: 'Redux',
+    level: '90%',
+    style: 'w-[90%]',
+  },
+  {
+    name: 'SWR',
+    level: '90%',
+    style: 'w-[90%]',
   },
   {
     name: 'Next.JS',
