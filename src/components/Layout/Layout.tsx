@@ -22,6 +22,8 @@ const Layout: FC<ILayout> = ({ children }) => {
 
 
       <div className={styles.layout}>
+
+
         <div className={styles.sidebar}>
           <Aside onClose={onClose} classes="hidden lg:block" />
         </div>
