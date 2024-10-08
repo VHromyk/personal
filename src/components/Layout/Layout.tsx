@@ -18,12 +18,7 @@ const Layout: FC<ILayout> = ({ children }) => {
 
   return (
     <>
-
-
-
       <div className={styles.layout}>
-
-
         <div className={styles.sidebar}>
           <Aside onClose={onClose} classes="hidden lg:block" />
         </div>
@@ -32,6 +27,8 @@ const Layout: FC<ILayout> = ({ children }) => {
           <div className="px-4 lg:px-12 py-4 max-w-[976px] mx-auto">
             {children}
           </div>
+
+
         </div>
       </div>
       <Modal isOpen={isOpen} onClose={onClose} />
