@@ -1,7 +1,9 @@
 import React from 'react'
+
+import Link from 'next/link'
+
 import { Icon } from '@/components/Icon'
 import { Navigation } from '@/components/Navigation'
-import Link from 'next/link'
 
 interface IAside {
   onClose: () => void

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Icon } from '@/components/Icon'
-import { ContactsList } from './ContactsList'
+
 import Image from 'next/image'
-import { ContactForm } from '@/screens/Contacts/form/ContactForm'
 
 import HI_IMG from '@/assets/images/hi.png'
+import { Icon } from '@/components/Icon'
+import { ContactForm } from '@/screens/Contacts/form/ContactForm'
+
+import { ContactsList } from './ContactsList'
 
 const socialList = [
   {

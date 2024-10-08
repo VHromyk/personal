@@ -7,7 +7,6 @@ $lgl: 1200px;
 $xl: 1440px;
 $xxl: 1720px;
 
-
 @mixin xs {
   @media (min-width: $xs) {
     @content;

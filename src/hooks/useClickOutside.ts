@@ -1,11 +1,12 @@
 'use client'
+
 import { MutableRefObject, useEffect } from 'react'
 
 export function useOnClickOutside(
   ref: MutableRefObject<any>,
   handler: (event: any) => void,
   secondRef?: MutableRefObject<any>,
-  thirdRef?: MutableRefObject<any>
+  thirdRef?: MutableRefObject<any>,
 ) {
   useEffect(
     () => {
@@ -35,6 +36,6 @@ export function useOnClickOutside(
     // ... callback/cleanup to run every render. It's not a big deal ...
     // ... but to optimize you can wrap handler in useCallback before ...
     // ... passing it into this hook.
-    [ref, secondRef, thirdRef, handler]
+    [ref, secondRef, thirdRef, handler],
   )
 }

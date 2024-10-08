@@ -1,9 +1,10 @@
 import React from 'react'
+
 import {
-  UseFormRegisterReturn,
   FieldError,
   FieldErrorsImpl,
   Merge,
+  UseFormRegisterReturn,
 } from 'react-hook-form'
 
 interface IBaseField {

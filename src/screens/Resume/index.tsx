@@ -1,8 +1,9 @@
 import React from 'react'
+
+import { Education } from '@/screens/Resume/Education'
+import { Experience } from '@/screens/Resume/Experience'
 import { Preview } from '@/screens/Resume/Preview'
 import { Skills } from '@/screens/Resume/Skills'
-import { Experience } from '@/screens/Resume/Experience'
-import { Education } from '@/screens/Resume/Education'
 
 export const ResumePage = () => {
   return (

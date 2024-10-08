@@ -1,8 +1,10 @@
-import '@/styles/globals.scss'
 import React from 'react'
+
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+
 import Layout from '@/components/Layout/Layout'
+import '@/styles/globals.scss'
 
 const GeneralSansFont = localFont({ src: '../fonts/GeneralSans-Variable.ttf' })
 

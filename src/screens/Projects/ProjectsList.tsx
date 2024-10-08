@@ -1,13 +1,15 @@
 import React from 'react'
+
 import Image, { StaticImageData } from 'next/image'
-import WRITESONIC_IMG from '@/assets/images/writesonic.jpg'
+
+import DELTALAKE_IMG from '@/assets/images/deltaLake.jpg'
+import DLC from '@/assets/images/dlc.png'
 import DUELMASTERS_IMG from '@/assets/images/duelmasters.jpg'
 import ECR_IMG from '@/assets/images/ecr.jpg'
-import DELTALAKE_IMG from '@/assets/images/deltaLake.jpg'
 import AVALANCHE_IMG from '@/assets/images/llm.jpg'
-import THC_IMG from '@/assets/images/thc.jpg'
 import SOLAR from '@/assets/images/solar.png'
-import DLC from '@/assets/images/dlc.png'
+import THC_IMG from '@/assets/images/thc.jpg'
+import WRITESONIC_IMG from '@/assets/images/writesonic.jpg'
 import { MotionListElement } from '@/components/Animation/MotionListElement'
 
 const projectsList = [

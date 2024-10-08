@@ -4,14 +4,12 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  grid-template-areas:
-    'content';
+  grid-template-areas: 'content';
 
   @include lg {
     grid-template-columns: 280px 1fr;
 
-    grid-template-areas:
-      'sidebar content'
+    grid-template-areas: 'sidebar content';
   }
 }
 

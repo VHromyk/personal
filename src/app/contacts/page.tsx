@@ -1,5 +1,7 @@
 import React from 'react'
+
 import { Metadata } from 'next'
+
 import { Contacts } from '@/screens/Contacts'
 
 export const metadata: Metadata = {

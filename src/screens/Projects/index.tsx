@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { ProjectsList } from '@/screens/Projects/ProjectsList'
 
 export const ProjectsPage = () => {

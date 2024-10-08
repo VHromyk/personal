@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
+
 import { Aside } from '@/components/Aside/Aside'
-import { useNoScroll } from '@/hooks/useNoScroll'
 import { useOnClickOutside } from '@/hooks/useClickOutside'
+import { useNoScroll } from '@/hooks/useNoScroll'
 
 interface IModal {
   isOpen: boolean

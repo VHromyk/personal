@@ -1,7 +1,10 @@
 'use client'
+
 import React from 'react'
-import { Icon } from '@/components/Icon'
+
 import axios from 'axios'
+
+import { Icon } from '@/components/Icon'
 
 const fileURL = '/files/CV_Frontend_Vitalii_Hromyk.pdf'
 

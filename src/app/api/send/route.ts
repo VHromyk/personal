@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+
 import { sendToTelegram } from '@/lib/telegram'
 
 export async function POST(req: Request) {
@@ -13,7 +14,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ status: 400, message: response })
   } catch (e) {
-    if(typeof e === 'object') {
+    if (typeof e === 'object') {
       return NextResponse.json({ status: 500, message: e })
     }
   }

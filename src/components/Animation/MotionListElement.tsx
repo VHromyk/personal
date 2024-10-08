@@ -1,5 +1,7 @@
 'use client'
+
 import React, { ReactNode, useRef } from 'react'
+
 import { motion, useInView } from 'framer-motion'
 
 export const MotionListElement = ({

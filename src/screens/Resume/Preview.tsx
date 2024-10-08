@@ -1,8 +1,10 @@
 import React from 'react'
+
+import Image from 'next/image'
+
 import AVATAR_IMG from '@/assets/images/avatar.jpg'
 import CURVE_IMG from '@/assets/images/curve.png'
 import { Icon } from '@/components/Icon'
-import Image from 'next/image'
 import DownloadCvButton from '@/screens/Resume/DownloadCvButton'
 
 export const Preview = () => {
