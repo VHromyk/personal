@@ -24,11 +24,10 @@ const Layout: FC<ILayout> = ({ children }) => {
         </div>
         <div className={styles.content}>
           <Header onOpen={onOpen} />
+
           <div className="px-4 lg:px-12 py-4 max-w-[976px] mx-auto">
             {children}
           </div>
-
-
         </div>
       </div>
       <Modal isOpen={isOpen} onClose={onClose} />
