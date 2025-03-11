@@ -6,6 +6,7 @@ import DELTALAKE_IMG from '@/assets/images/deltaLake.jpg'
 import DLC from '@/assets/images/dlc.png'
 import DUELMASTERS_IMG from '@/assets/images/duelmasters.jpg'
 import ECR_IMG from '@/assets/images/ecr.jpg'
+import GITUP_IMG from '@/assets/images/gitup.png'
 import AVALANCHE_IMG from '@/assets/images/llm.jpg'
 import SOLAR from '@/assets/images/solar.png'
 import THC_IMG from '@/assets/images/thc.jpg'
@@ -13,6 +14,23 @@ import WRITESONIC_IMG from '@/assets/images/writesonic.jpg'
 import { MotionListElement } from '@/components/Animation/MotionListElement'
 
 const projectsList = [
+  {
+    image: GITUP_IMG,
+    title: 'GitUp',
+    description:
+      'This project integrates ClickUp and GitLab, automating development workflows. For instance, associating a ClickUp task ID in GitLab commits or branches can automatically update task statuses, reducing manual updates and enhancing team efficiency.',
+    technologies: [
+      'HTML5',
+      'React',
+      'Next.JS',
+      'RTK Query',
+      'SCSS',
+      'BEM',
+      'React hook form',
+      'FSD (Future-Sliced Design)',
+    ],
+    link: 'https://app.gitup.ai/',
+  },
   {
     image: DLC,
     title: 'DLC fun',
@@ -147,11 +165,11 @@ const ProjectsListItem = ({
   return (
     <MotionListElement index={index}>
       <div className="flex flex-col md:flex-row gap-5 md:gap-12">
-        <div className="flex-1 rounded-lg overflow-hidden p-2 border-[1px] border-bgDark">
+        <div className="flex-1 rounded-lg flex flex-col justify-center">
           <Image
             src={item.image}
             alt={item.title}
-            className="h-full w-full object-cover rounded-lg"
+            className="w-full object-contain rounded-lg block shadow-custom"
           />
         </div>
         <div className="flex-1">

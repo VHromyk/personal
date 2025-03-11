@@ -55,6 +55,7 @@ const hardSkills = [
   'Tailwind',
   'Figma',
   'GIT',
+  'FSD (Future-Sliced Design)',
 ]
 
 const hardSkillsProgressList = [
@@ -95,6 +96,11 @@ const hardSkillsProgressList = [
   },
   {
     name: 'Gatsby',
+    level: '90%',
+    style: 'w-[90%]',
+  },
+  {
+    name: 'FSD (Future-Sliced Design)',
     level: '90%',
     style: 'w-[90%]',
   },

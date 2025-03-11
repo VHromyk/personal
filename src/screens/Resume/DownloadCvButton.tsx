@@ -6,7 +6,7 @@ import axios from 'axios'
 
 import { Icon } from '@/components/Icon'
 
-const fileURL = '/files/CV_Frontend_Vitalii_Hromyk.pdf'
+const fileURL = '/files/Vitalii_Hromyk_Frontend_dev_2025.pdf'
 
 export const DownloadCvButton = () => {
   const onDownloadCvHandler = async () => {
