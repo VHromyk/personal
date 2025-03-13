@@ -62,7 +62,7 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Run Cypress Tests
-        run: npm run test:e2e
+        run: npx cypress run --browser chrome --headless
 
       - name: Build with Next.js
         run: npm run build
