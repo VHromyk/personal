@@ -61,8 +61,8 @@ jobs:
       - name: Run TypeScript Check
         run: npx tsc --noEmit
 
-      - name: Run Cypress Tests
-        run: npx cypress run --browser chrome --headless
+      - name: Cypress GitHub Action
+        uses: cypress-io/github-action@v6
 
       - name: Build with Next.js
         run: npm run build
