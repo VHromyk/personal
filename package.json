@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:e2e": "npx cypress open",
+    "test:e2e": "npx cypress run",
     "format:check": "prettier --check --ignore-path .gitignore .",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\"",
     "prepare": "husky"
