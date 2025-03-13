@@ -67,6 +67,7 @@ jobs:
           build: npm run build
           start: npm start
           browser: chrome
+          headless: true
 
       - name: Build with Next.js
         run: npm run build
