@@ -1,5 +1,5 @@
-import { ResumePage } from '@/screens/Resume'
+import { ResumeView } from '@/views'
 
 export default function Home() {
-  return <ResumePage />
+  return <ResumeView />
 }

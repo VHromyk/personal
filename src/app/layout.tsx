@@ -1,12 +1,9 @@
 import React from 'react'
 
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 
-import Layout from '@/components/Layout/Layout'
-import '@/styles/globals.scss'
-
-const GeneralSansFont = localFont({ src: '../fonts/GeneralSans-Variable.ttf' })
+import { GeneralSansFont } from '@/core'
+import { Layout } from '@/widgets'
 
 export const metadata: Metadata = {
   title: 'Vitalii Hromyk | Resume',
@@ -18,7 +15,7 @@ export const metadata: Metadata = {
       'Detailed resume of Vitalii Hromyk, a skilled frontend developer with experience in modern web technologies and a passion for creating intuitive user interfaces.',
     type: 'website',
     url: 'www.vitalii-hromyk.com',
-    images: '/openGraph.jpg',
+    images: '/assets/images/openGraph.jpg',
   },
 }
 

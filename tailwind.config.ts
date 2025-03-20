@@ -1,13 +1,12 @@
 import type { Config } from 'tailwindcss'
 
+const styledFolders = ['app', 'views', 'widgets', 'shared', 'features']
+
 const config: Config = {
   mode: 'jit',
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/screens/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: styledFolders.map(
+    (folder) => `./src/${folder}/**/*.{js,ts,jsx,tsx,mdx}`,
+  ),
   theme: {
     colors: {
       bgLight: '#F5F5F5',

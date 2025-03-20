@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Metadata } from 'next'
 
-import { Contacts } from '@/screens/Contacts'
+import { Contacts } from '@/views'
 
 export const metadata: Metadata = {
   title: 'Vitalii Hromyk | Contacts',

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-import { sendToTelegram } from '@/lib/telegram'
+import { sendToTelegram } from '@/shared'
 
 export async function POST(req: Request) {
   const body = await req.json()

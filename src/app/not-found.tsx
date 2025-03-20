@@ -1,17 +1,14 @@
 import React from 'react'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
-import CRY_IMG from '@/assets/images/cry.png'
-import { Avatar } from '@/components/Avatar'
-import { BackHomeBtn } from '@/components/Buttons/BackHome'
+import { Avatar, Button, E_ROUTES } from '@/shared'
 
 const NotFound = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center overflow-auto py-6 px-4">
       <Avatar>
-        <Image src={CRY_IMG} alt="cried avatar" />
+        <Image src="/assets/images/cry.png" alt="cried avatar" />
       </Avatar>
       <div className="mt-3 flex flex-col items-center max-w-[600px] text-center leading-normal">
         <span className="text-6xl font-medium">404</span>
@@ -20,7 +17,7 @@ const NotFound = () => {
           I`m very sorrt for the inconvenience. It looks looks you`re trying to
           acces a page that has been deleted or never even existed
         </span>
-        <BackHomeBtn />
+        <Button text="Back to home page" href={E_ROUTES.HOME} />
       </div>
     </div>
   )
