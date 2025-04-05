@@ -791,8 +791,8 @@ define(['exports'], function (t) {
             void 0 !== e && void 0 !== n
               ? ((i = e), (a = n + 1))
               : void 0 !== e && void 0 === n
-              ? ((i = e), (a = r))
-              : void 0 !== n && void 0 === e && ((i = r - n), (a = r)),
+                ? ((i = e), (a = r))
+                : void 0 !== n && void 0 === e && ((i = r - n), (a = r)),
             { start: i, end: a }
           )
         })(i, r.start, r.end),
