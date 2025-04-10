@@ -37,7 +37,7 @@ export const Sidebar: FC<ISidebarProps> = ({ onClose, classes }) => {
             href={E_ROUTES.HOME}
             className="text-2xl font-semibold ease-in duration-300 hover:opacity-70"
           >
-            !!!Vitalii Hromyk
+            Vitalii Hromyk
           </Link>
           <span className="text-sm">Front-end developer</span>
         </section>
