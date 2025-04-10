@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import Link from 'next/link'
 
-import { Icon } from '@/shared'
+import { E_ROUTES, Icon } from '@/shared'
 
 import { Navigation } from './navigation'
 import { ISidebarProps } from './sidebar.types'
@@ -34,7 +34,7 @@ export const Sidebar: FC<ISidebarProps> = ({ onClose, classes }) => {
         <section className="mt-[60px] lg:mt-[120px] flex flex-col gap-1">
           <Link
             onClick={onClose}
-            href="/personal/public"
+            href={E_ROUTES.HOME}
             className="text-2xl font-semibold ease-in duration-300 hover:opacity-70"
           >
             Vitalii Hromyk

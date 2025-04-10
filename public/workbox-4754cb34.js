@@ -1022,9 +1022,7 @@ define(['exports'], function (t) {
           this.$.set(t, n.integrity)
         }
         if ((this.F.set(r, t), this.H.set(r, i), e.length > 0)) {
-          const t = `Workbox is precaching URLs without revision info: ${e.join(
-            ', ',
-          )}\nThis is generally NOT safe. Learn more at https://bit.ly/wb-precache`
+          const t = `Workbox is precaching URLs without revision info: ${e.join(', ')}\nThis is generally NOT safe. Learn more at https://bit.ly/wb-precache`
           console.warn(t)
         }
       }
