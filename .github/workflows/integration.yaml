@@ -9,15 +9,14 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     env:
       NEXT_TELEGRAM_BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       NEXT_TELEGRAM_CHAT_ID: ${{ secrets.CHAT_ID }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,12 +28,10 @@ jobs:
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
-            exit 0
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-            exit 0
           else
             echo "Unable to determine package manager" >&2
             exit 1
@@ -49,8 +46,7 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v3
         with:
-          path: |
-            .next/cache
+          path: .next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
@@ -64,15 +60,23 @@ jobs:
       - name: Run TypeScript Check
         run: npx tsc --noEmit
 
-      - name: Cypress GitHub Action
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Run Cypress tests on built Next.js app
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
           start: npm start
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 60
           browser: chrome
           headless: true
 
-      - name: Build with Next.js
-        run: npm run build
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: ${{ success() }}
+
+    steps:
+      - name: Deploy to Vercel via hook
+        run: curl -X POST ${{ secrets.DEPLOY_WEB_HOOK }}
